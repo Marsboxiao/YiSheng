@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2EFED9</color>
+    <color name="colorPrimaryDark">#2EFED9</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWrite">#FFFFFF</color>
+    <color name="colorBackGray">#A4A4A4</color>
+    <color name="colorBackBlue">#78F7DA</color>
+
+    <color name="colorLoginBack">#7FF6D6</color>
+    <color name="colorLoginState">#D9FDF3</color>
+    <color name="colorLoginText">#80F6D6</color>
+    <color name="colorToolbar">#2EFED9</color>
+    <color name="colorMyBack">#F5F5F5</color>
+
+    <color name="colorHangup">#E8453E</color>
+    <color name="colorAnswer">#6DC112</color>
+    <color name="tcolorWrite">#80FFFFFF</color>
+</resources>

@@ -1,0 +1,62 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/cell_state_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_cell_state_small"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/cell_state_no_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_remote_mute_default_profile"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/cell_video_mute_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="@string/call_video_mute"
+        android:textColor="@android:color/white"
+        android:textSize="6sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/cell_no_video_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/cell_state_user_profile_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/cell_state_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/mic_off"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/cell_state_audio_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/mic_off_small"
+        android:visibility="gone" />
+</merge>

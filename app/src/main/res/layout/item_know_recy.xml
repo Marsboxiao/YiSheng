@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/know_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="65%w"
+        app:layout_heightPercent="65%w"
+        android:src="@mipmap/know_img"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/fun_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="20%w"
+        app:layout_widthPercent="100%w"
+        android:gravity="center"
+        android:textSize="16sp" />
+    
+</com.zhy.android.percent.support.PercentLinearLayout>

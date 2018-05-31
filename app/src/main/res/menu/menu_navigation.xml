@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/i_knowledge"
+        android:checked="true"
+        android:icon="@drawable/selector_knowledge"
+        android:title="@string/back_knowleage" />
+
+    <item
+        android:id="@+id/i_map"
+        android:icon="@drawable/selector_map"
+        android:title="@string/back_map" />
+
+    <item
+        android:id="@+id/i_message"
+        android:icon="@drawable/selector_message"
+        android:title="@string/back_message" />
+
+    <item
+        android:id="@+id/i_my"
+        android:icon="@drawable/selector_my"
+        android:title="@string/back_my" />
+
+</menu>
