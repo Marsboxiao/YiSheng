@@ -3,14 +3,17 @@ package com.zty.yisheng.model.api;
 import com.zty.yisheng.model.bean.BannerImageBean;
 import com.zty.yisheng.model.bean.ClassBean;
 import com.zty.yisheng.model.bean.ClassListBean;
+import com.zty.yisheng.model.bean.CodeBean;
 import com.zty.yisheng.model.bean.DocDataBean;
 import com.zty.yisheng.model.bean.DocImageBean;
 import com.zty.yisheng.model.bean.DocSpecialityBean;
 import com.zty.yisheng.model.bean.DocTimeBean;
+import com.zty.yisheng.model.bean.ForgetBean;
 import com.zty.yisheng.model.bean.KnowledgeBean;
 import com.zty.yisheng.model.bean.LabelBean;
 import com.zty.yisheng.model.bean.LabelListBean;
 import com.zty.yisheng.model.bean.LoginBean;
+import com.zty.yisheng.model.bean.RegisterBean;
 import com.zty.yisheng.model.bean.SDocDataBean;
 import com.zty.yisheng.model.bean.SDocImageBean;
 import com.zty.yisheng.model.bean.SDocIsanswerBean;
@@ -165,5 +168,29 @@ public interface YiShengService {
      */
     @GET("/CQ120Service.asmx/getsyssetting")
     Observable<SysSettingBean> getTimeApprove();
+
+    /**
+     * 获取短信验证码
+     */
+    @GET("/CQ120Service.asmx/docsendsms")
+    Observable<CodeBean> getCodeApprove(@Query("strmobile")String docphone);
+
+//    /**
+//     * 注册(以后可以使用，添加了code)
+//     */
+//    @GET("/CQ120Service.asmx/docregistration")
+//    Observable<RegisterBean> getRegisterApprove(@Query("strname")String docphone,@Query("strpassword")String password,@Query("strcode")String doccode);
+
+    /**
+     * 注册
+     */
+    @GET("/CQ120Service.asmx/docregistration")
+    Observable<RegisterBean> getRegisterApprove(@Query("strname")String docphone,@Query("strpassword")String password);
+
+    /**
+     * 忘记密码
+     */
+    @GET("/CQ120Service.asmx/docmodifypwd")
+    Observable<ForgetBean> getForgetApprove(@Query("strname")String docphone,@Query("strpassword")String password,@Query("strcode")String doccode);
 
 }

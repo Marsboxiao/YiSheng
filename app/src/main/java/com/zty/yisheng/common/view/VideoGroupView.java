@@ -1,17 +1,12 @@
 package com.zty.yisheng.common.view;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.log.L;
 import android.os.Handler;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.ainemo.sdk.otf.NemoSDK;
 import com.ainemo.sdk.otf.OpenGLTextureView;
@@ -117,7 +112,7 @@ public class VideoGroupView extends ViewGroup {
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        int size = Math.min(mVideoViews.size(), 1); //最多取5个view显示
+        int size = Math.min(mVideoViews.size(), 5); //最多取5个view显示
         L.i(TAG, "layout cell count " + size);
 
         if (size == 0) {
@@ -135,17 +130,17 @@ public class VideoGroupView extends ViewGroup {
                     mCellStateViews.get(0).bringToFront();
                 } else {
                     L.i(TAG, "layout item at " + i);
-                    mVideoViews.get(i).layout(0,0,0,0);
+                    mVideoViews.get(i).layout((r - l) / 5 * i + CELL_VIDEO_PADDING, (b - t) * 3 / 4, (r - l) / 5 * (i + 1), b - CELL_VIDEO_PADDING);
                     mVideoViews.get(i).bringToFront();
-                    mCellStateViews.get(i).layout(0,0,0,0);
+                    mCellStateViews.get(i).layout((r - l) / 5 * i + CELL_VIDEO_PADDING, (b - t) * 3 / 4, (r - l) / 5 * (i + 1), b - CELL_VIDEO_PADDING);
                     mCellStateViews.get(i).bringToFront();
                 }
             }
             L.i(TAG, "layout local item");
-            localVideoView.layout(0,0,0,0);
+            localVideoView.layout(l + CELL_VIDEO_PADDING, (b - t) * 3 / 4, (r + l) / 5, b - CELL_VIDEO_PADDING);
             cellStateView.setLocalFullScreen(false);
             localVideoView.bringToFront();
-            cellStateView.layout(0,0,0,0);
+            cellStateView.layout(l + CELL_VIDEO_PADDING, (b - t) * 3 / 4, (r + l) / 5, b - CELL_VIDEO_PADDING);
             cellStateView.bringToFront();
         }
     }
@@ -275,8 +270,8 @@ public class VideoGroupView extends ViewGroup {
 //            CellStateView cellStateView = new CellStateView(mContext);
 //            cellStateView.setMuteAudio(videoInfo.isAudioMute());//是否关闭语音
 //            L.i(TAG, "lsx videoInfo.getLayoutVideoState()::" + videoInfo.getLayoutVideoState() + ":getVideoMuteReason:" + videoInfo.getVideoMuteReason());
-//            cellStateView.setVideoMute(videoInfo.isVideoMute(), videoInfo.getVideoMuteReason(),videoInfo.getRemoteName());//显示视频
-//            cellStateView.setNoVideMute(isNoVideoState(videoInfo), videoInfo.getLayoutVideoState(), videoInfo.getVideoMuteReason(),videoInfo.getRemoteName());//关闭视频
+//            cellStateView.setVideoMute(videoInfo.isVideoMute(), videoInfo.getVideoMuteReason());//显示视频
+//            cellStateView.setNoVideMute(isNoVideoState(videoInfo), videoInfo.getLayoutVideoState(), videoInfo.getVideoMuteReason());//关闭视频
 //            L.i(TAG, "lsx isNoVideoState:::" + isNoVideoState(videoInfo));
 //            mCellStateViews.add(cellStateView);
 //            addView(toAdd);

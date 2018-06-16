@@ -9,6 +9,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zty.yisheng.R;
@@ -38,8 +39,13 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     EditText loginPassword;
     @BindView(R.id.login_button)
     Button loginButton;
+    @BindView(R.id.login_forget)
+    TextView loginForget;
+    @BindView(R.id.login_register)
+    TextView loginRegister;
     private String username;
     private String password;
+    public static LoginActivity loginActivity=null;
 
     @Override
     public void showError(String msg) {
@@ -49,6 +55,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     @Override
     protected void initView() {
         initPermissions();
+        loginActivity = this;
     }
 
     private void initPermissions() {
@@ -131,6 +138,16 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
         } else {
             mPersenter.getLoginAttribute(username, password);
         }
+    }
+
+    @OnClick(R.id.login_forget)
+    public void setLoginForget(){
+        startActivity(new Intent(LoginActivity.this,ForgetActivity.class));
+    }
+
+    @OnClick(R.id.login_register)
+    public void setLoginRegister(){
+        startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
     }
 
     @Override

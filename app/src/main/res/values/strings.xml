@@ -14,12 +14,15 @@
     <string name="login_user">账号</string>
     <string name="login_pw">密码</string>
     <string name="login_button">登录</string>
+    <string name="login_register">注册</string>
 
     <!--忘记密码-->
     <string name="forget_code">验证码</string>
     <string name="forget_getcode">获取验证码</string>
-    <string name="forget_pw">确认密码</string>
+    <string name="forget_npw">请输入确认密码</string>
     <string name="forget_button">提交</string>
+    <string name="forget_user">请输入手机号码</string>
+    <string name="forget_pw">请输入密码</string>
 
     <string name="know_text">默认目录</string>
     <string name="my_basic">基本资料</string>

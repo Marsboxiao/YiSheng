@@ -6,14 +6,17 @@ import com.zty.yisheng.common.utils.SystemUtil;
 import com.zty.yisheng.model.bean.BannerImageBean;
 import com.zty.yisheng.model.bean.ClassBean;
 import com.zty.yisheng.model.bean.ClassListBean;
+import com.zty.yisheng.model.bean.CodeBean;
 import com.zty.yisheng.model.bean.DocDataBean;
 import com.zty.yisheng.model.bean.DocImageBean;
 import com.zty.yisheng.model.bean.DocSpecialityBean;
 import com.zty.yisheng.model.bean.DocTimeBean;
+import com.zty.yisheng.model.bean.ForgetBean;
 import com.zty.yisheng.model.bean.KnowledgeBean;
 import com.zty.yisheng.model.bean.LabelBean;
 import com.zty.yisheng.model.bean.LabelListBean;
 import com.zty.yisheng.model.bean.LoginBean;
+import com.zty.yisheng.model.bean.RegisterBean;
 import com.zty.yisheng.model.bean.SDocDataBean;
 import com.zty.yisheng.model.bean.SDocImageBean;
 import com.zty.yisheng.model.bean.SDocIsanswerBean;
@@ -267,6 +270,27 @@ public class RetrofitHelper {
      */
     public Observable<SysSettingBean> getTimeApproveInfo(){
         return mYiShengService.getTimeApprove();
+    }
+
+    /**
+     * 获取验证码
+     */
+    public Observable<CodeBean> getCodeApproveInfo(String docphone){
+        return mYiShengService.getCodeApprove(docphone);
+    }
+
+    /**
+     * 注册
+     */
+    public Observable<RegisterBean> getRegisterApproveInfo(String docphone, String password) {
+        return mYiShengService.getRegisterApprove(docphone, password);
+    }
+
+    /**
+     * 忘记密码
+     */
+    public Observable<ForgetBean> getForgetApproveInfo(String docphone, String password, String doccode) {
+        return mYiShengService.getForgetApprove(docphone, password, doccode);
     }
 
 }

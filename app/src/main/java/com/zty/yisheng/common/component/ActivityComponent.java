@@ -5,11 +5,13 @@ import android.app.Activity;
 import com.zty.yisheng.common.component.module.ActivityModule;
 import com.zty.yisheng.common.component.scope.ActivityScope;
 import com.zty.yisheng.ui.activity.BannerImageActivity;
+import com.zty.yisheng.ui.activity.ForgetActivity;
 import com.zty.yisheng.ui.activity.KnowcContentActivity;
 import com.zty.yisheng.ui.activity.KnowsListActivity;
 import com.zty.yisheng.ui.activity.LoginActivity;
 import com.zty.yisheng.ui.activity.MainActivity;
 import com.zty.yisheng.ui.activity.MySetActivity;
+import com.zty.yisheng.ui.activity.RegisterActivity;
 import com.zty.yisheng.ui.activity.SickActivity;
 import com.zty.yisheng.ui.activity.SplashActivity;
 import com.zty.yisheng.ui.activity.TimeActivity;
@@ -43,5 +45,9 @@ public interface ActivityComponent {
     void inject(MySetActivity mySetActivity);
 
     void inject(SickActivity sickActivity);
+
+    void inject(RegisterActivity registerActivity);
+
+    void inject(ForgetActivity forgetActivity);
 
 }

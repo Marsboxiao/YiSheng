@@ -81,6 +81,14 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
         <activity
+            android:name=".ui.activity.RegisterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.ForgetActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".ui.activity.MainActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
